@@ -1,4 +1,7 @@
 <template>
+  <article class="prose prose-sm md:prose-base mb-8 max-w-none">
+    <h1>Estado</h1>
+  </article>
   <template v-for="feature in features" :key="feature.title">
     <BaseFeatureShowcase :title="feature.title" :description="feature.description">
       <template #example>
@@ -24,9 +27,8 @@
 
 <script setup lang="ts">
 import { BaseFeatureExample, BaseFeatureFileList, BaseFeatureShowcase } from '.'
-import features from '../data/index'
+import { features } from '../data'
 import BaseFeatureFileItem from './BaseFeatureFileItem.vue'
-console.log({ features })
 </script>
 
 <style scoped></style>

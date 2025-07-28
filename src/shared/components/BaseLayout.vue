@@ -1,14 +1,19 @@
 <template>
-  <BaseNavbar />
-  <main class="flex justify-center">
-    <div class="max-w-4xl p-4 flex flex-col gap-4">
-      <BaseFeatureShowcaseList />
+  <div class="w-full flex flex-col items-center">
+    <div class="max-w-6xl">
+      <BaseDrawer>
+        <BaseNavbar />
+        <main class="p-4 flex flex-col gap-4">
+          <BaseIntroduction />
+          <BaseFeatureShowcaseList />
+        </main>
+      </BaseDrawer>
     </div>
-  </main>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { BaseFeatureShowcaseList, BaseNavbar } from '.'
+import { BaseFeatureShowcaseList, BaseNavbar, BaseIntroduction, BaseDrawer } from '.'
 </script>
 
 <style scoped></style>
