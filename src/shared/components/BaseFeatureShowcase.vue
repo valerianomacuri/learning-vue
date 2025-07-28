@@ -1,9 +1,7 @@
 <template>
   <section>
     <article class="prose prose-sm md:prose-base mb-8 max-w-none">
-      <h3>
-        {{ title }}
-      </h3>
+      <h3># {{ title }}</h3>
       <p class="text-justify" v-html="description"></p>
     </article>
     <slot name="example"></slot>
