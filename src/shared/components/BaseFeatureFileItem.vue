@@ -4,7 +4,7 @@
     {{ fileName }}
   </label>
   <div
-    class="tab-content bg-base-100 border-base-300 p-6 overflow-x-auto"
+    class="tab-content bg-base-100 border-base-300 p-6 overflow-x-auto prose prose-sm md:prose-base max-w-none"
     v-html="prettyVueCode"
   ></div>
 </template>
