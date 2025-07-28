@@ -5,22 +5,24 @@
         <ReactiveExample />
       </BaseFeatureExample>
     </template>
-    <template #code>
-      <BaseFeatureFileContainer>
-        <BaseFeatureFile :name="fileName" :file-name="fileName" :default-is-open="true">
-          <BaseFeatureCode :code="reactiveExampleRaw" />
-        </BaseFeatureFile>
-      </BaseFeatureFileContainer>
+    <template #file-list>
+      <BaseFeatureFileList>
+        <BaseFeatureFileItem
+          :code="reactiveExampleRaw"
+          :default-is-open="true"
+          :file-name="fileName"
+          :name="fileName"
+        />
+      </BaseFeatureFileList>
     </template>
   </BaseFeatureShowcase>
 </template>
 
 <script setup lang="ts">
 import {
-  BaseFeatureCode,
   BaseFeatureExample,
-  BaseFeatureFile,
-  BaseFeatureFileContainer,
+  BaseFeatureFileItem,
+  BaseFeatureFileList,
   BaseFeatureShowcase,
 } from '@/shared/components'
 import { ReactiveExample } from '.'

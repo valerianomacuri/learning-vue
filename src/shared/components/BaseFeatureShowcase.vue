@@ -7,7 +7,7 @@
       <p class="text-justify" v-html="description"></p>
     </article>
     <slot name="example"></slot>
-    <slot name="code"></slot>
+    <slot name="file-list"></slot>
   </section>
 </template>
 
