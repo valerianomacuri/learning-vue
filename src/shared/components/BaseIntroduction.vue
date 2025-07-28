@@ -3,21 +3,7 @@
     class="rounded-box from-base-content/5 mt-4 flex max-w-[56rem] gap-4 bg-gradient-to-br p-6 sm:mb-4 sm:gap-10 sm:p-10 lg:max-w-[54rem]"
   >
     <div class="mt-2 size-10 shrink-0 *:size-full sm:size-20">
-      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-        <title>file_type_vue</title>
-        <path
-          d="M24.4,3.925H30L16,28.075,2,3.925H12.71L16,9.525l3.22-5.6Z"
-          style="fill: #41b883"
-        ></path>
-        <path
-          d="M2,3.925l14,24.15L30,3.925H24.4L16,18.415,7.53,3.925Z"
-          style="fill: #41b883"
-        ></path>
-        <path
-          d="M7.53,3.925,16,18.485l8.4-14.56H19.22L16,9.525l-3.29-5.6Z"
-          style="fill: #35495e"
-        ></path></svg
-      ><!---->
+      <BaseVueIcon />
     </div>
     <div>
       <div class="ms-2 mb-0.5 text-sm font-bold tracking-wide sm:mb-2 sm:text-lg">Vue</div>
@@ -64,6 +50,8 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { BaseVueIcon } from '.'
+</script>
 
 <style scoped></style>
