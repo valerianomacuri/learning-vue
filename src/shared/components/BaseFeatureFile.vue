@@ -1,13 +1,15 @@
 <template>
-  <BaseTabItem name="LocalStateExample.vue" :default-checked="defaultIsOpen"
-    ><slot></slot
-  ></BaseTabItem>
+  <BaseTabItem :name="name" :file-name="fileName" :default-checked="defaultIsOpen">
+    <slot></slot>
+  </BaseTabItem>
 </template>
 
 <script setup lang="ts">
 import BaseTabItem from './BaseTabItem.vue'
-const { defaultIsOpen = false } = defineProps<{
+const { defaultIsOpen = false, name = '' } = defineProps<{
   defaultIsOpen?: boolean
+  fileName?: string
+  name: string
 }>()
 </script>
 

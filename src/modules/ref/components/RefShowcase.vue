@@ -7,7 +7,7 @@
     </template>
     <template #code>
       <BaseFeatureFileContainer>
-        <BaseFeatureFile name="RefExample.vue" :default-is-open="true">
+        <BaseFeatureFile :name="fileName" :file-name="fileName" :default-is-open="true">
           <BaseFeatureCode :code="refExampleRaw" />
         </BaseFeatureFile>
       </BaseFeatureFileContainer>
@@ -29,6 +29,7 @@ import refExampleRaw from './RefExample.vue?raw'
 import data from '../data'
 
 const { title, description } = data
+const fileName = 'RefExample.vue'
 </script>
 
 <style scoped></style>

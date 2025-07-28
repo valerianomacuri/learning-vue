@@ -7,7 +7,7 @@
     </template>
     <template #code>
       <BaseFeatureFileContainer>
-        <BaseFeatureFile name="ReactiveExample.vue" :default-is-open="true">
+        <BaseFeatureFile :name="fileName" :file-name="fileName" :default-is-open="true">
           <BaseFeatureCode :code="reactiveExampleRaw" />
         </BaseFeatureFile>
       </BaseFeatureFileContainer>
@@ -29,6 +29,7 @@ import reactiveExampleRaw from './ReactiveExample.vue?raw'
 import data from '../data'
 
 const { title, description } = data
+const fileName = 'ReactiveExample.vue'
 </script>
 
 <style scoped></style>
