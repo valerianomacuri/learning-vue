@@ -4,9 +4,10 @@
     {{ fileName }}
   </label>
   <div
-    class="tab-content bg-base-100 border-base-300 p-6 overflow-x-auto prose prose-sm md:prose-base max-w-none"
-    v-html="prettyVueCode"
-  ></div>
+    class="tab-content bg-base-100 border-base-300 overflow-x-auto prose prose-sm md:prose-base max-w-none"
+  >
+    <div style="display: grid" v-html="prettyVueCode"></div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -35,4 +36,9 @@ onMounted(() => {
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+.tab,
+.tab-content {
+  background-color: var(--color-neutral);
+}
+</style>
