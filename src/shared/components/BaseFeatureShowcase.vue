@@ -1,7 +1,9 @@
 <template>
-  <section>
+  <section :id="anchor" class="pt-4">
     <article class="prose prose-sm md:prose-base mb-8 max-w-none">
-      <h3># {{ title }}</h3>
+      <h3>
+        <a class="no-underline" :href="'#' + anchor"> # {{ title }} </a>
+      </h3>
       <p class="text-justify" v-html="description"></p>
     </article>
     <slot name="example"></slot>
@@ -13,7 +15,8 @@
 interface Props {
   title?: string
   description?: string
+  anchor?: string
 }
 
-const { title = '', description = '' } = defineProps<Props>()
+const { title = '', description = '', anchor = '' } = defineProps<Props>()
 </script>

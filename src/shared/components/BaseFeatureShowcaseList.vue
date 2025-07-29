@@ -3,9 +3,13 @@
     <h1>Estado</h1>
   </article>
   <template v-for="feature in features" :key="feature.title">
-    <BaseFeatureShowcase :title="feature.title" :description="feature.description">
+    <BaseFeatureShowcase
+      :title="feature.title"
+      :description="feature.description"
+      :anchor="feature.anchor"
+    >
       <template #example>
-        <BaseFeatureExample title="Ejemplo interactivo: Actualizar un contador">
+        <BaseFeatureExample :title="feature.exampleTitle">
           <component :is="feature.exampleComponent" />
         </BaseFeatureExample>
       </template>
