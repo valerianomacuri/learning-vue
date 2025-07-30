@@ -9,8 +9,8 @@
       :anchor="feature.anchor"
     >
       <template #example>
-        <BaseFeatureExample :title="feature.exampleTitle">
-          <component :is="feature.exampleComponent" />
+        <BaseFeatureExample>
+          <component :is="feature.component" />
         </BaseFeatureExample>
       </template>
       <template #file-list>
